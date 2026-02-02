@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import { Toaster } from '@/components/ui/toaster';
@@ -30,7 +30,6 @@ const pageTransition = {
 function App() {
   return (
     <ThemeProvider>
-      <Router>
         <div className="min-h-screen flex flex-col">
           <ScrollToTop />
           <Navigation />
@@ -129,7 +128,6 @@ function App() {
           <Footer />
           <Toaster />
         </div>
-      </Router>
     </ThemeProvider>
   );
 }
